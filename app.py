@@ -24,6 +24,10 @@ def serve():
 def static_files(path):
     return send_from_directory(app.static_folder, path)
 
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204  # 空のレスポンスを返す
+
 if __name__ == '__main__':
     # 開発
     # app.run(debug=True)
