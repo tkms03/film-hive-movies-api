@@ -1,5 +1,5 @@
 import os
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, render_template
 from flask_cors import CORS
 from waitress import serve
 from api.tmdb_currently_showing import movies_blueprint
@@ -18,7 +18,8 @@ app.register_blueprint(search_blueprint, url_prefix='/api/search')
 
 @app.route('/')
 def serve():
-    return send_from_directory(app.static_folder, 'index.html')
+    # Flask はデフォルトで templates フォルダを探しに行くので、index.html は templates フォルダ内に置くべき
+    return render_template('index.html')
 
 @app.route('/<path:path>')
 def static_files(path):
