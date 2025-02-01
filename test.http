@@ -1,0 +1,7 @@
+POST http://127.0.0.1:5000/api/movies/search
+Content-Type: application/json
+
+{
+    "year": "2010",
+    "genre": "sci-fi"
+}
