@@ -1,2 +1,1 @@
-"flask" 
-"requests" 
+ECHO ÇÕ <ON> Ç≈Ç∑ÅB
