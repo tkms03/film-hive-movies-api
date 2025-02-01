@@ -1,6 +1,7 @@
 import os
 from flask import Flask, send_from_directory
 from flask_cors import CORS
+from waitress import serve
 from api.tmdb_currently_showing import movies_blueprint
 from api.tmdb_popularity_showing import popularity_blueprint
 from api.tmdb_rating_showing import rating_blueprint
@@ -24,4 +25,8 @@ def static_files(path):
     return send_from_directory(app.static_folder, path)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # 開発
+    # app.run(debug=True)
+    # 本番
+    port = int(os.environ.get('PORT', 8080))  # 環境変数PORTがあれば使用
+    serve(app, host='0.0.0.0', port=port)
