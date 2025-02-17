@@ -55,6 +55,11 @@ def serve():
     return send_from_directory(os.path.join(project_root, "templates"), "index.html")
 
 
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, "static"), "favicon.ico")
+
+
 # @app.route("/<path:path>")
 # def static_files(path):
 #     return send_from_directory(app.static_folder, path)
