@@ -8,15 +8,9 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 login_blueprint = Blueprint("login", __name__)
 
-# Flaskアプリケーションのインスタンスを作成
-app = Flask(__name__)
-
-# # CORSの設定を追加
-CORS(app)
-
 
 # ログイン認証
-@login_blueprint.route("", methods=["POST", "OPTIONS"])
+@login_blueprint.route("/login", methods=["POST", "OPTIONS"])
 def login():
 
     if request.method == "OPTIONS":

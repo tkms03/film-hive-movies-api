@@ -47,6 +47,7 @@ app.register_blueprint(login_blueprint, url_prefix="/login")
 app.register_blueprint(createUser_blueprint, url_prefix="/createUser")
 
 
+# サーバーのルート
 @app.route("/")
 def serve():
     # プロジェクトのルートディレクトリを取得

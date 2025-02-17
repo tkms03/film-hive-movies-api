@@ -6,15 +6,9 @@ from db.services.create_user_servise import create_user
 
 createUser_blueprint = Blueprint("createUser", __name__)
 
-# Flaskアプリケーションのインスタンスを作成
-app = Flask(__name__)
-
-# # CORSの設定を追加
-CORS(app)
-
 
 # ログイン認証
-@createUser_blueprint.route("", methods=["POST", "OPTIONS"])
+@createUser_blueprint.route("/createUser", methods=["POST", "OPTIONS"])
 def createUser():
 
     if request.method == "OPTIONS":
