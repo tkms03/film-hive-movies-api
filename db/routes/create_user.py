@@ -6,8 +6,11 @@ from db.services.create_user_servise import create_user
 
 createUser_blueprint = Blueprint("createUser", __name__)
 
-# CORSの設定を追加
-CORS(createUser_blueprint)
+# Flaskアプリケーションのインスタンスを作成
+app = Flask(__name__)
+
+# # CORSの設定を追加
+CORS(app)
 
 
 # ログイン認証

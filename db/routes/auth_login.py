@@ -8,8 +8,11 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 login_blueprint = Blueprint("login", __name__)
 
-# CORSの設定を追加
-CORS(login_blueprint)
+# Flaskアプリケーションのインスタンスを作成
+app = Flask(__name__)
+
+# # CORSの設定を追加
+CORS(app)
 
 
 # ログイン認証
