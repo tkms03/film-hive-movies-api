@@ -8,7 +8,7 @@ createUser_blueprint = Blueprint("createUser", __name__)
 
 
 # ログイン認証
-@createUser_blueprint.route("/createUser", methods=["POST", "OPTIONS"])
+@createUser_blueprint.route("", methods=["POST", "OPTIONS"])
 def createUser():
 
     if request.method == "OPTIONS":

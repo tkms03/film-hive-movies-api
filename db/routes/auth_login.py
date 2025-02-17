@@ -10,7 +10,7 @@ login_blueprint = Blueprint("login", __name__)
 
 
 # ログイン認証
-@login_blueprint.route("/login", methods=["POST", "OPTIONS"])
+@login_blueprint.route("", methods=["POST", "OPTIONS"])
 def login():
 
     if request.method == "OPTIONS":
