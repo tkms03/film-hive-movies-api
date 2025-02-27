@@ -70,7 +70,7 @@ def favicon():
 # アプリの起動
 if __name__ == "__main__":
     # 開発
-    app.run(debug=True)
+    app.run(debug=false)
     # 本番
     # port = int(os.environ.get('PORT', 8080))  # 環境変数PORTがあれば使用
     # serve(app, host='0.0.0.0', port=port)

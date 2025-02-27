@@ -80,4 +80,4 @@ def get_detail_movies():
 
 # アプリケーションを実行
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=false)

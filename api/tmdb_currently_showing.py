@@ -46,4 +46,4 @@ def get_movies():
 if __name__ == '__main__':
     # debug=Trueを指定すると、エラー時にデバッグ情報が表示され、開発時に便利です。
     # ただし、本番環境ではdebug=Falseに設定してください。
-    app.run(debug=True)
+    app.run(debug=false)
